@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8x8 Board Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-container">
+        <div id="timer">Time Left: <span id="time">60</span></div>
+        <div id="board"></div>
+        <div id="controls">
+            <button id="pause">Pause</button>
+            <button id="resume">Resume</button>
+            <button id="reset">Reset</button>
+            <button id="undo">Undo</button>
+            <button id="redo">Redo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<audio id="shoot-sound" src="shoot.mp3" preload="auto"></audio>
+<audio id="hit-sound" src="hit.mp3" preload="auto"></audio>
+</html>

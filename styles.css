@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#timer {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#board {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, 50px);
+    grid-template-rows: repeat(8, 50px);
+    gap: 2px;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #aaa;
+}
+
+.piece {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+#controls {
+    margin-top: 10px;
+}
+
+button {
+    margin: 0 5px;
+    padding: 10px 15px;
+}
+
+.piece.titan {
+    background-color: #ff5733;
+}
+
+.piece.tank {
+    background-color: #33ff57;
+}
+
+.piece.ricochet {
+    background-color: #3357ff;
+}
+
+.piece.semiricochet {
+    background-color: #f3ff33;
+}
+
+.piece.cannon {
+    background-color: #33fff7;
+}
+
+.bullet {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    transition: top 0.2s ease, left 0.2s ease;
+}
+
+@media (max-width: 600px) {
+    #board {
+        grid-template-columns: repeat(8, 30px);
+        grid-template-rows: repeat(8, 30px);
+    }
+
+    .cell {
+        width: 30px;
+        height: 30px;
+    }
+
+    .piece {
+        width: 25px;
+        height: 25px;
+    }
+
+    button {
+        padding: 5px 10px;
+    }
+}
